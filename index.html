@@ -294,9 +294,9 @@ footer p { margin: 6px 0; }
 
   <h2 id="solution">Our Solution: GPay Order Retry</h2>
 
-  <p>Cashfree has worked with Google Pay to keep the order open through the retry window, so that Google Pay's own retry prompt has something to complete against.</p>
+  <p>The fix sits on Cashfree's side of the integration, not inside Google Pay itself. Google Pay already offers the customer a retry after a wrong PIN. What was missing was a gateway that kept the order alive long enough for that retry to land.</p>
 
-  <p>Instead of treating a wrong PIN failure as terminal the moment it arrives, Cashfree checks with Google whether the transaction is still eligible for a retry. If it is, the transaction is held in a non terminal state for a short window while the customer takes a second attempt.</p>
+  <p>Before marking a wrong PIN failure terminal, Cashfree's gateway now checks whether Google Pay still considers the transaction eligible for a retry. If it does, the order is held in a non terminal state for a short window instead of being closed immediately, so the retry the customer taps completes against a live order rather than nothing.</p>
 
   <p><b>With this live:</b></p>
 
