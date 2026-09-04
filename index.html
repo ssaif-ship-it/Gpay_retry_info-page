@@ -149,27 +149,11 @@ ol.plain li, ul.plain li { margin-bottom: 10px; }
   .screens { flex-direction: column; }
 }
 
-.inline-img {
-  background: #f4f4f7;
-  border: 1px dashed #c9c9d4;
-  padding: 34px 24px;
-  text-align: center;
-  color: #777;
-  font-size: 14px;
-  margin: 8px 0 28px;
-}
-.inline-img b { display: block; color: #444; margin-bottom: 4px; font-size: 15px; }
-
-.author {
+.related {
+  margin-top: 40px;
   border-top: 1px solid #eee;
-  margin-top: 44px;
   padding-top: 22px;
-  font-size: 15px;
-  color: #777;
 }
-.author a { text-decoration: none; }
-
-.related { margin-top: 40px; }
 .related h3 {
   font-size: 17px;
   color: #240253;
@@ -178,19 +162,6 @@ ol.plain li, ul.plain li { margin-bottom: 10px; }
 .related li { margin-bottom: 10px; font-size: 16px; }
 .related ul { list-style: none; padding: 0; margin: 0; }
 .related a { text-decoration: none; }
-
-.drafts {
-  background: #fcfaf3;
-  border-left: 3px solid #d8b84a;
-  padding: 18px 22px;
-  margin: 40px 0 0;
-  font-size: 15px;
-  line-height: 1.6;
-  color: #5f5220;
-}
-.drafts p { margin: 0 0 10px; }
-.drafts ul { margin: 0; padding-left: 20px; }
-.drafts li { margin-bottom: 8px; }
 
 footer {
   background: #240253;
@@ -237,7 +208,6 @@ footer p { margin: 6px 0; }
       <li><a href="#what-happens">What Happens on a Wrong PIN</a></li>
       <li><a href="#timing-gap">The Timing Gap</a></li>
       <li><a href="#solution">Our Solution: GPay Order Retry</a></li>
-      <li><a href="#impact">Impact</a></li>
     </ol>
   </details>
 
@@ -284,12 +254,6 @@ footer p { margin: 6px 0; }
 
   <p>For the business, it lands in the success rate looking identical to a genuine insufficient funds or bank downtime failure, and whatever support ticket follows has no useful resolution.</p>
 
-  <!-- TODO before publish: number below is a placeholder. Rerun the wrong PIN merchant
-       analysis as a percentage, not a ranked list. Confirm the denominator, GPay intent
-       failures and all UPI failures give very different numbers. Copy below says GPay
-       intent failures specifically. -->
-  <p>Wrong PIN entries currently account for <b>[INSERT STAT]% of Google Pay intent failures</b> on eligible merchants.</p>
-
   <p>For businesses processing high transaction volumes daily, that is a real dent in the overall success rate, caused by a five second sequencing gap rather than anything the merchant, the customer or the bank did wrong.</p>
 
   <h2 id="solution">Our Solution: GPay Order Retry</h2>
@@ -311,24 +275,9 @@ footer p { margin: 6px 0; }
 
   <p><a href="https://merchant.cashfree.com/merchants/signup?source-action=Blog&amp;action=Sign%20Up&amp;button-id=StartNow_BlogFooterCTA"><b>Signup Now</b></a>!</p>
 
-  <h2 id="impact">Impact</h2>
-
-  <!-- TODO before publish: this number does not exist yet. It comes out of the tracking
-       step of the rollout plan. If the pilot has not produced a figure by publish date,
-       cut this whole section and end the post on the Solution section instead of
-       shipping a soft claim. -->
-  <p><b>[INSERT PILOT RESULT: success rate improvement on the pilot merchant cohort, measured on the wrong PIN segment before and after enablement.]</b></p>
-
-  <div class="inline-img">
-    <b>Results screenshot</b>
-    Same slot as the TPV post used for its success rate chart. Pull from the pilot dashboard once tracking is live.
-  </div>
-
   <p>The addressable pool is already known. Every wrong PIN failure on Google Pay is a customer who was willing and able to pay, offered a retry by their own app, and blocked from using it. Recovering part of that segment lifts the success rate without asking the customer to do anything differently.</p>
 
   <p>GPay Order Retry is rolling out now and is enabled per merchant. Talk to your account manager to have it switched on.</p>
-
-  <p class="author">Author <a href="#">[Author name]</a></p>
 
   <div class="related">
     <h3>Related Posts</h3>
@@ -336,17 +285,6 @@ footer p { margin: 6px 0; }
       <li><a href="https://www.cashfree.com/blog/registered-bank-account-verification-problem-upi-investment-platforms/">Solving the Registered Bank Account Verification Problem in UPI: For Investment Category</a></li>
       <li><a href="https://www.cashfree.com/blog/top-upi-apps-in-india/">Top 16 UPI Apps in India 2026</a></li>
       <li><a href="https://www.cashfree.com/blog/imps-vs-neft-rtgs/">What is NEFT, RTGS &amp; IMPS? Full Forms, Meaning, Limits &amp; Key Differences</a></li>
-    </ul>
-  </div>
-
-  <div class="drafts">
-    <p><b>Internal notes, delete this block before publishing.</b></p>
-    <ul>
-      <li>Two numbers are placeholders and need real data, not estimates. Details are in the HTML comments next to each one.</li>
-      <li>The three screenshots above are real Google Pay screens pulled from a live checkout on a food delivery app. Confirm with legal or the Google Pay partnership contact whether they can be published as-is, or whether they need to be swapped for a Cashfree merchant example or a version cleared for external use.</li>
-      <li>The TPV post claims the capability is unique to Cashfree. That claim is deliberately left out here. Confirm it for this feature before adding it.</li>
-      <li>The TPV post cites a measured success rate improvement. This feature has no equivalent figure yet, which is why the Impact section is a placeholder rather than a soft claim.</li>
-      <li>The results screenshot slot is still a dashed placeholder, no real dashboard image exists yet.</li>
     </ul>
   </div>
 
